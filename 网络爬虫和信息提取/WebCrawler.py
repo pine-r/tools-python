@@ -18,3 +18,17 @@ def get_html_text(url):
 if __name__ == "__main__":
     url = "http://www.baidu.com"
     print(get_html_text(url))
+
+    # put方法
+    payload = {'key1': 'value1111', 'key2': 'value2222'}
+    r = requests.put("http://httpbin.org/put", data=payload)
+    print("put 字典", r.text)  # 提交一个字典，被存储到form字段下，但是会将原有的数据覆盖掉
+    r = requests.put("http://httpbin.org/put", data='ABC')
+    print("put 字符串", r.text)  # 提交一个字符串，被存储到data字段下,但是会将原有的数据覆盖掉
+
+    # post方法使用
+    payload = {'key1': 'value1', 'key2': 'value2'}
+    r = requests.post("http://httpbin.org/post", data=payload)
+    print("post 字典", r.text)  # 提交一个字典，被存储到form字段下
+    r = requests.post("http://httpbin.org/post", data='DEF')
+    print("post 字符串", r.text)  # 提交一个字符串，被存储到data字段下

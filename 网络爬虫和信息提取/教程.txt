@@ -8,7 +8,7 @@ requests.get() ： 获取HTML网页的主要方法，对应于HTTP的GET
 requests.head() ： 获取HTML网页头信息的方法，对应于HTTP的HEAD
 requests.post() ： 向HTML网页提交POST请求的方法，对应于HTTP的POST
 requests.put() ： 向HTML网页提交PUT请求的方法，对应于HTTP的PUT
-requests.patch() ： 向HTML网页提交局部修改请求，对应于HTTP的PATCH
+requests.patch() ： 向HTML网页提交局部修改请求，对应于HTTP的PATCH，修改URL地址中的某个字段而不影响其他字段
 requests.delete() ： 向HTML网页提交删除请求，对应于HTTP的DELETE
 
 r=request.get("http://www.baidu.com")
