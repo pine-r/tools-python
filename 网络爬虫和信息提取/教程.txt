@@ -1,0 +1,31 @@
+1、安装requests库
+pip install requests
+
+2、requests库的介绍与使用
+2.1 requests库的7个主要方法
+requests.request() : 构造一个请求，支撑以下各种方法的基础方法
+requests.get() ： 获取HTML网页的主要方法，对应于HTTP的GET
+requests.head() ： 获取HTML网页头信息的方法，对应于HTTP的HEAD
+requests.post() ： 向HTML网页提交POST请求的方法，对应于HTTP的POST
+requests.put() ： 向HTML网页提交PUT请求的方法，对应于HTTP的PUT
+requests.patch() ： 向HTML网页提交局部修改请求，对应于HTTP的PATCH
+requests.delete() ： 向HTML网页提交删除请求，对应于HTTP的DELETE
+
+r=request.get("http://www.baidu.com")
+通过requests.get()方法会获取到一个Response对象，该对象的属性包括：
+r.status_code : HTTP请求返回状态，200表示连接成功，404表示失败
+r.text : HTTP相应内容的字符串形式，即url对应的页面内容
+r.encoding : 从HTTP header中猜测的响应内容编码方式
+r.apparent_encoding: 从内容中分析出的响应内容编码方式，根据内容分析编码，更加准确，把该编码的值赋给encoding就可以读取中文了。
+r.content : HTTP相应内容的二进制形式，比如图片，可以通过content还原出来
+
+2.2 Requests库的异常
+requests.ConnectionError : 网络连接错误异常，如DNS查询失败、拒绝连接等
+requests.HTTPError : HTTP错误异常
+requests.URLRequired : URL缺失异常
+requests.TooManyRedirects : 超过最大重定向次数，产生重定向异常
+requests.ConnectTimeout : 连接远程服务器超时异常
+requests.Timeout : 请求URL超时，产生超时异常
+
+r.raise_for_status() : 如果不是200，产生异常requests.HTTPError
+
