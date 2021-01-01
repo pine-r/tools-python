@@ -32,7 +32,7 @@ def line_wrapping_file(file):
             f.write(line)
 
 
-def file_compare(file1, file2):
+def files_compare(file1, file2):
     hd = difflib.HtmlDiff()
     line_wrapping_file(file1)
     line_wrapping_file(file2)
@@ -42,13 +42,15 @@ def file_compare(file1, file2):
         file1_content = f1.readlines()
     with open(file2, 'r') as f2:
         file2_content = f2.readlines()
-    with open('out.html', 'w+') as fo:
+    out = os.path.abspath('.')[:27] + os.sep + "templates" + os.sep + "file_compare" + os.sep + "out.html"
+    with open(out, 'w+') as fo:
         fo.write(hd.make_file(file1_content, file2_content, fromdesc=file1.split(os.sep)[-1],
                               todesc=file2.split(os.sep)[-1]))
-    webbrowser.open_new_tab('out.html')
+    # webbrowser.open_new_tab('out.html')
 
 
 if __name__ == '__main__':
     file1 = os.path.abspath('.') + os.sep + "file1.txt"
     file2 = os.path.abspath('.') + os.sep + "file2.txt"
-    file_compare(file1, file2)
+    # print(os.path.abspath('.')[:27] + "templates" + os.sep + "file_compare" + os.sep + "out.html")
+    # file_compare1(file1, file2)
