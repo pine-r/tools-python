@@ -50,7 +50,8 @@ def files_compare(file1, file2):
 
 
 if __name__ == '__main__':
-    file1 = os.path.abspath('.') + os.sep + "file1.txt"
-    file2 = os.path.abspath('.') + os.sep + "file2.txt"
+    pass
+    # file1 = os.path.abspath('.') + os.sep + "file1.txt"
+    # file2 = os.path.abspath('.') + os.sep + "file2.txt"
     # print(os.path.abspath('.')[:27] + "templates" + os.sep + "file_compare" + os.sep + "out.html")
     # file_compare1(file1, file2)

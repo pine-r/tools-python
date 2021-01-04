@@ -10,10 +10,10 @@
         <h1>文件比对</h1>
     </div>
     <div class="content">
-        <form action="/file_compare_result" method="post">
-            文件一：<input type="text" name="file1"><br>
-            文件二：<input type="text" name="file2"><br>
-            <input type="submit" value="比对">
+        <form action="/file_compare_result" method="post" enctype="multipart/form-data">
+            文件一：<input type="file" name="file1"><br>
+            文件二：<input type="file" name="file2"><br>
+            <input type="submit" value="上传比对">
         </form>
     </div>
     <div class="footer">
