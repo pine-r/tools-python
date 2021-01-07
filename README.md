@@ -1,5 +1,22 @@
 # tools-python
 使用python写的小工具  
+###环境要求：  
+Python3  
+###使用教程：  
+1、克隆代码仓  
+```
+git clone git@github.com:pine-r/tools-python.git
+```  
+2、安装第三方库  
+```
+pip install -r requirements.txt  
+```
+3、运行main.py文件
+```
+python main.py
+```
+
+###功能描述
 1、网络爬虫和信息提取  
-2、文件差异比对  
-FileCompare v1.0: 基础功能实现，文件**上传**比对，比对结果每一行只展示80个字符
+2、文件差异比对 FileCompare   
+v1.0: &nbsp;&nbsp;基础功能实现，文件**上传**比对
