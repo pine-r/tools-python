@@ -16,7 +16,9 @@ pip install -r requirements.txt
 python main.py
 ```
 
-###功能描述
+###功能描述  
 1、网络爬虫和信息提取  
 2、文件差异比对 FileCompare   
-v1.0: &nbsp;&nbsp;基础功能实现，文件**上传**比对
+v1.0: &nbsp;&nbsp;基础功能实现，文件**上传**比对  
+3、文件字符串替换  
+v1.0: &nbsp;&nbsp;实现单个文件特定字符串替换

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>tinyHeart</title>
+	
+    <meta name="keywords" content="keyword1,keyword2,keyword3">
+    <meta name="description" content="this is my page">
+    <meta name="content-type" content="text/html; charset=UTF-8">
+    
+    <!--<link rel="stylesheet" type="text/css" href="./styles.css">-->
+	<style type="text/css">
+		body{
+			padding-top:10px;
+		}
+		.all_bg{
+			width:800px;
+			height:600px;
+			margin:0px auto;
+		}
+		#allcanvas{
+			position:relative;
+			width:800px;
+			height:600px;
+			margin:0px;
+		}
+		#canvas1{
+			position:absolute;
+			bottom:0;
+			left:0;
+			z-index:1;
+		}
+		#canvas2{
+			position:absolute;
+			bottom:0;
+			left:0;
+			z-index:0;
+		}
+		
+	</style>
+  </head>
+  
+  <body>
+  	<div class="all_bg">
+  		<div id="allcanvas">
+  			<canvas id="canvas1" width="800" height="600"></canvas>
+  			<canvas id="canvas2" width="800" height="600"></canvas>
+  		</div>
+  	</div>
+  	<script type="text/javascript" src="../../static/js/fish_mom/main.js"></script>
+  	<script type="text/javascript" src="../../static/js/fish_mom/commonFunctions.js"></script>
+  	<script type="text/javascript" src="../../static/js/fish_mom/background.js"></script>
+  	<script type="text/javascript" src="../../static/js/fish_mom/ane.js"></script>
+  	<script type="text/javascript" src="../../static/js/fish_mom/fruit.js"></script>
+  	<script type="text/javascript" src="../../static/js/fish_mom/mom.js"></script>
+  	<script type="text/javascript" src="../../static/js/fish_mom/collision.js"></script>
+  	<script type="text/javascript" src="../../static/js/fish_mom/baby.js"></script>
+  	<script type="text/javascript" src="../../static/js/fish_mom/data.js"></script>
+  	<script type="text/javascript" src="../../static/js/fish_mom/wave.js"></script>
+  	<script type="text/javascript" src="../../static/js/fish_mom/halo.js"></script>
+  	<script type="text/javascript" src="../../static/js/fish_mom/dust.js"></script>
+  </body>
+</html>

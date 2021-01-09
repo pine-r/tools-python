@@ -21,4 +21,5 @@
     text-align: center;
     line-height: 120px; /* 行高等于div高，使垂直居中 */
     border: 1px solid #000;
+    border-radius: 20px;
 }
