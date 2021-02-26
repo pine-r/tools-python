@@ -1,7 +1,7 @@
 # tools-python
 使用python写的小工具  
 ###环境要求：  
-Python3  
+Python3.8.6  
 ###使用教程：  
 1、克隆代码仓  
 ```
