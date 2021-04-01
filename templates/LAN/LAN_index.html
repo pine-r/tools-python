@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet"  href="../../static/css/file_compare.css">
+    <link rel="shortcut icon" href="../../static/img/favicon.ico" type="image/x-icon">
+    <title>判断两个IP是否属于同一局域网</title>
+</head>
+<body>
+    <div class="header">
+        <h1>判断两个IP是否属于同一局域网</h1>
+        <p>
+            原理：把IP和子网掩码做AND操作，同一网段，必须网络标识一样。
+        </p>
+    </div>
+    <div class="content">
+        <form action="/judge_lan" method="post">
+            <table border="1">
+                <thead>
+                    <tr>
+                        <th>IPV4地址</th>
+                        <th>子网掩码</th>
+                        <th>网络标识</th>
+                        <th>主机标识</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><input type="text" name="ip_address1" value="{{ ip_address1_to_bin }}" title="{{ ip_address1 }}"></td>
+                        <td><input type="text" name="subnet_mask1" value="{{ subnet_mask1_to_bin }}" title="{{ subnet_mask1 }}"></td>
+                        <td>{{ address1_net_id }}</td>
+                        <td>{{ host1_id }}</td>
+                    </tr>
+                    <tr>
+                        <td><input type="text" name="ip_address2" value="{{ ip_address2_to_bin }}" title="{{ ip_address2 }}"></td>
+                        <td><input type="text" name="subnet_mask2" value="{{ subnet_mask2_to_bin }}" title="{{ subnet_mask2 }}"></td>
+                        <td>{{ address2_net_id }}</td>
+                        <td>{{ host2_id }}</td>
+                    </tr>
+                </tbody>
+            </table>
+            <input type="submit" value="判断"><br>
+        </form>
+    </div>
+    <p>结果： {{ msg }}</p>
+    <div class="footer">
+        <span>Copyright &copy; 2021 任亭松</span>
+    </div>
+</body>
+</html>

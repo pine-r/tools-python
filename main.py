@@ -9,6 +9,7 @@ from FileCompare import file_compare_blue
 from ReplaceString import replace_string_blue
 from WebCrawler import web_crawler_blue
 from FishMom import fish_mom_blue
+from LAN import LAN_blue
 
 app = Flask(__name__)
 # 注册比对工具
@@ -19,6 +20,8 @@ app.register_blueprint(replace_string_blue)
 app.register_blueprint(web_crawler_blue)
 # 注册鱼妈妈小游戏
 app.register_blueprint(fish_mom_blue)
+# 注册两个IP是否是同一局域网判断工具
+app.register_blueprint(LAN_blue)
 
 
 @app.route('/')
